@@ -1,0 +1,29 @@
+1. sticky bit linux
+- Explanation: The sticky bit is a special permission for directories to prevent users from deleting files they don't own.
+
+2. -rw-r--r-t / -rw-r--r-T
+- Explanation: Sticky bit on files (rare, historical). 't' means execute bit for others is set, 'T' means not set.
+
+3. how many link are created when create a directory file.
+- Explanation: A new directory starts with 2 links ('.' and parent link). Each subdirectory adds 1 more link.
+
+4. chmod +t mydir / cat file > ./mydir/file2
+- Explanation: chmod +t sets sticky bit; file creation inside sticky dir allows only owner/root to delete/rename.
+
+5. significance of $
+- Explanation: '$' is used for prompt (normal user), variable expansion, end-of-line in regex, command substitution, positional parameters like $0, $1, $$, $? etc.
+
+6. command to sort content inside of the file without duplicates
+- Explanation: sort -u filename sorts the file and removes duplicates.
+
+7. file with -rw-r--r-- / chmod a=r
+- Explanation: chmod a=r sets read-only for all users; file permissions change to -r--r--r--.
+
+8. grep '[^f-h]ood' file
+- Explanation: Matches lines ending with 'ood' where the first character is NOT f, g, or h.
+
+9. gg
+- Explanation: In vim, gg moves cursor to first line; in bash it's undefined; in gaming/chat, "good game".
+
+10. Which of the following command would help in setting su-id bit to the file bok?
+- Explanation: chmod u+s bok or chmod 4755 bok sets the SUID bit, allowing execution with owner permissions.
