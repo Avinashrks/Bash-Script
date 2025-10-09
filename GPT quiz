@@ -1,0 +1,20 @@
+Q2: What does `set -e` do in a shell script?
+Answer: It makes the script exit immediately if any command fails (non-zero exit status).
+
+❌ Q8: What is the purpose of `/etc/fstab`?
+Answer: It defines how and where disk partitions and devices should be automatically mounted at boot.
+
+❌ Q12: What does `tar -czvf backup.tar.gz /home/user` do?
+Answer: It creates a gzip-compressed tar archive of `/home/user` named `backup.tar.gz`.
+
+❌ Q13: What command checks the current runlevel?
+Answer: `runlevel` or `who -r`, and on systemd systems: `systemctl get-default`.
+
+❌ Q16: Which command changes ownership of a file to a specific user and group?
+Answer: `chown alice:devs report.txt`
+
+❌ Q18: Which command displays all environment variables?
+Answer: `printenv` or `env`
+
+❌ Q20: Which command shows uptime, load average, and logged-in users?
+Answer: `uptime`
