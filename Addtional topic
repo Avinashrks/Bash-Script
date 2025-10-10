@@ -1,0 +1,8 @@
+who
+who -r
+run level of system 0-6
+0--- takes the os to a halt state 
+6---- reboots the system
+
+who -dh     zombie process
+who - q.  number of users connected to linux
