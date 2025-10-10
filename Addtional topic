@@ -6,3 +6,10 @@ run level of system 0-6
 
 who -dh     zombie process
 who - q.  number of users connected to linux
+uname
+uname -p
+uname -o
+uname -r version
+uname -t 
+cat file1 file2
+cat -n file adds line number
