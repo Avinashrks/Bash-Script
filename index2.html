@@ -1,0 +1,21 @@
+<!--Html code for excel to S3 -->
+<input type="file" id="excelFile" />
+<button onclick="uploadData()">Upload</button>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script>
+  async function uploadData() {
+    const file = document.getElementById('excelFile').files[0];
+    const data = await file.arrayBuffer();
+    const workbook = XLSX.read(data);
+    const sheetName = workbook.SheetNames[0];
+    const sheet = workbook.Sheets[sheetName];
+    const jsonData = XLSX.utils.sheet_to_json(sheet);
+    
+    // Send all data at once to API
+    fetch('https://bwac810wx3.execute-api.ap-south-1.amazonaws.com/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(jsonData)
+    }).then(res => console.log('Data sent!', res));
+  }
+</script>
